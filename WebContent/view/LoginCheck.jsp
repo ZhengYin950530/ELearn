@@ -22,6 +22,8 @@
     		</tr>
     	</table>	
     </form>
-
+<script src="LoginLengthCheck.js"></script>
 </body>
+
+
 </html>

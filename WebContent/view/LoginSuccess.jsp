@@ -7,7 +7,7 @@
 <title>loginSuccess.jsp</title>
 </head>
 <body>
-   当前用户: ${requestScope.u.getUsername() }
+<center>当前用户: ${requestScope.u.getUsername() }</center>
 
 </body>
 </html>
