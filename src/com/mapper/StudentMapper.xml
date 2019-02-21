@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.mapper.UserMapper">
-	<resultMap type="com.entity.User" id="UserMap">
+<mapper namespace="com.mapper.StudentMapper">
+	<resultMap type="com.entity.Student" id="StudentMap">
 		<id property="student_id" column="student_id" />
 		<result property="student_name" column="student_name" />
 		<result property="student_sex" column="student_sex" />
@@ -14,7 +14,7 @@
 
 	</resultMap>
 	<!--检索mysql需要的数据 -->
-	<select id="getStudent" parameterType="com.entity.Student"
+	<!-- <select id="getStudent" parameterType="com.entity.Student"
 		resultType="com.entity.Student" resultMap="StudentMap">
 		select 
 		student_name,
@@ -27,9 +27,9 @@
 		y_student
 		where
 		student_id = #{student_id}
-	</select>
+	</select> -->
 	<!-- 添加学生数据 -->
-	<insert id="setStudent" parameterType="com.entity.Student">
+	<!-- <insert id="setStudent" parameterType="com.entity.Student">
 		insert into 
 		y_student
 		(
@@ -52,7 +52,7 @@
 		student_email= #{student_email}
 		)
 	
-	</insert>
+	</insert> -->
 	<!-- 删除学生数据 -->
 	<delete id="getStudent" parameterType="com.entity.Student">
 		delete
@@ -64,7 +64,7 @@
 	</delete>
 	<!-- 更改学生数据 -->
 	
-	<update id="setStudent" parameterType="com.entity.Student" >
+<!-- 	<update id="setStudent" parameterType="com.entity.Student" >
     update y_student
     <set >
       <if test="student_id != null" >
@@ -101,6 +101,6 @@
     where student_id = #{student_id,jdbcType=VARCHAR}
 
   </update>
-	
+	 -->
 
 </mapper>
