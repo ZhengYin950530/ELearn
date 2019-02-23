@@ -30,10 +30,6 @@ public class StudentController {
 		request.setAttribute("student",student);
 		return "student";
 		
-
-		
-
-		
 		
 	}
 

@@ -14,7 +14,7 @@
 	<!--检索mysql需要的数据 -->
 	<select id="getUser" parameterType="com.entity.User"
 		resultType="com.entity.User" resultMap="UserMap">
-		select user_name,user_id
+		select username,user_id
 		from 
 		y_user
 		where
