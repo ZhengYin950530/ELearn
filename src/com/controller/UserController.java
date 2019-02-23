@@ -24,7 +24,7 @@ public class UserController {
 		User yin = new User();
 		yin.setUser_id(request.getParameter("name"));
 		yin.setPassword(request.getParameter("pwd"));
-		User user = userMapper.getUser(yin);
+		User user = userMapper.getUser(yin);//DB comes data
 		
 		if(user != null &&!"".equals(user)){
 			request.setAttribute("u", user);

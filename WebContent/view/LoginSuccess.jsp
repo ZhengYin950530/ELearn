@@ -8,6 +8,10 @@
 </head>
 <body>
 <center>当前用户: ${requestScope.u.getUsername() }</center>
+<center>当前用户: ${requestScope.u.getUser_id() }</center>
+<center><a href="Student.do?student_id=${requestScope.u.getUser_id() }">
 
+查看个人信息
+</a></center>
 </body>
 </html>

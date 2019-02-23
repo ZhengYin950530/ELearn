@@ -10,97 +10,15 @@
 		<result property="student_tel" column="student_tel" />
 		<result property="student_address" column="student_address" />
 		<result property="student_email" column="student_email" />
-		
-
 	</resultMap>
 	<!--检索mysql需要的数据 -->
-	<!-- <select id="getStudent" parameterType="com.entity.Student"
-		resultType="com.entity.Student" resultMap="StudentMap">
-		select 
-		student_name,
-		student_sex,
-		student_age,
-		student_tel,
-		student_address,
-		student_email
-		from 
-		y_student
-		where
-		student_id = #{student_id}
-	</select> -->
-	<!-- 添加学生数据 -->
-	<!-- <insert id="setStudent" parameterType="com.entity.Student">
-		insert into 
-		y_student
-		(
-		student_id,
-		student_name,
-		student_sex,
-		student_age,
-		student_tel,
-		student_address,
-		student_email
-		)
-		value
-		(
-		student_id = #{student_id},
-		student_name = #{student_name},
-		student_sex = #{student_sex},
-		student_age = #{student_age},
-		student_tel = #{student_tel},
-		student_address = #{student_address},
-		student_email= #{student_email}
-		)
+	<select id="getStudent" parameterType="com.entity.Student" resultType="com.entity.Student" 
+	resultMap="StudentMap">
+		select student_id ,student_name,student_sex,student_age,student_tel,student_address,student_email
+     	from y_student
+     	where student_id = #{student_id}
+
+	</select>
 	
-	</insert> -->
-	<!-- 删除学生数据 -->
-	<delete id="getStudent" parameterType="com.entity.Student">
-		delete
-		*
-		from
-		y_student
-		where
-		stuent_id=#{student_id,jdbcType=VARCHAR}
-	</delete>
-	<!-- 更改学生数据 -->
-	
-<!-- 	<update id="setStudent" parameterType="com.entity.Student" >
-    update y_student
-    <set >
-      <if test="student_id != null" >
-        student_id = #{student_id,jdbcType=VARCHAR},
-      </if>
-
-      <if test="student_name != null" >
-        student_name = #{student_name,jdbcType=VARCHAR},
-      </if>
-
-      <if test="student_sex != null" >
-        student_sex = #{student_sex,jdbcType=INT},
-      </if>
-
-      <if test="student_age != null" >
-        student_age = #{student_age,jdbcType=INT},
-      </if>
-
-      <if test="student_tel != null" >
-        student_tel = #{student_tel,jdbcType=VARCHAR},
-      </if>
-
-      <if test="student_address != null" >
-        student_address = #{student_address,jdbcType=VARCHAR},
-      </if>
-
-      <if test="student_email != null" >
-        student_email = #{student_email,jdbcType=VARCHAR},
-      </if>
-
-
-    </set>
-
-    where student_id = #{student_id,jdbcType=VARCHAR}
-
-  </update>
-	 -->
 
 </mapper>

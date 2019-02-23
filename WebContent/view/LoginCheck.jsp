@@ -16,13 +16,15 @@
     			<td>密   码：</td>
     			<td><input type="password" name="pwd"/></td>
     		</tr>
+
     		<tr>
     			<td><input type="submit" value="登陆"/></td>
     			<td><input type="reset" value="注册"/></td>
     		</tr>
+
     	</table>	
     </form>
-<script src="LoginLengthCheck.js"></script>
+
 </body>
 
 

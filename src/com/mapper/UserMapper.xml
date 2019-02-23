@@ -6,6 +6,7 @@
 		<id property="user_id" column="user_id" />
 		<result property="username" column="username" />
 		<result property="password" column="password" />
+		<result property="age" column="age"/>
 		<result property="flag" column="flag" />
 		
 
@@ -13,11 +14,12 @@
 	<!--检索mysql需要的数据 -->
 	<select id="getUser" parameterType="com.entity.User"
 		resultType="com.entity.User" resultMap="UserMap">
-		select username
+		select user_name,user_id
 		from 
 		y_user
 		where
 		user_id = #{user_id} and password = #{password}
+		
 	</select>
 	
 
