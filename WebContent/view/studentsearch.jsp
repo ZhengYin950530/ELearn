@@ -13,10 +13,10 @@
     			<td>姓   名：</td>
     			<td><input type="text" name="stname"/></td>
     		</tr>
-<!--     		<tr>
+     		<tr>
     			<td>年   龄：</td>
     			<td><input type="text" name="stage"/></td>
-    		</tr> -->
+    		</tr> 
 
     		<tr>
     			<td><input type="submit" value="查询"/></td>

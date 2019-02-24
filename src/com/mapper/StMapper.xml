@@ -17,6 +17,8 @@
 		select student_id ,student_name,student_sex,student_age,student_tel,student_address,student_email
      	from y_student
      	where student_name = #{st_name} 
+     	or
+     	student_age = #{st_age}
 
 	</select>
 	

@@ -20,14 +20,12 @@ public class StController {
 		St yin = new St();
 		
 		yin.setSt_name(request.getParameter("stname"));
+		yin.setSt_age(request.getParameter("stage"));
 
 		System.out.println(yin.getSt_name());
+		System.out.println(yin.getSt_age());
 
-		St student = stMapper.getSt(yin);
-		
-		
-		System.out.println(student.getSt_name());
-		//System.out.println(student.getSt_age());
+		St student = stMapper.getSt(yin);		
 
 		
 		request.setAttribute("studentresult",student);
