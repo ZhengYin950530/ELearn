@@ -43,7 +43,6 @@ public class StAjaxController {
 		St yin = new St();
 		HttpSession session = request.getSession();
 		yin.setSt_id(request.getParameter("stid"));
-		System.out.println("st:"+yin.getSt_id());
 		yin.setSt_name(request.getParameter("stname"));
 		yin.setSt_sex(request.getParameter("stsex"));
 		yin.setSt_age(request.getParameter("stage"));
@@ -54,6 +53,26 @@ public class StAjaxController {
 		//equals a break point for testing the data was inserted to the database successfully or not;
 		System.out.println(student.getSt_name());
 		System.out.println(student.getSt_age());
+		session.setAttribute("studentresult", student);
+	}
+	
+	@RequestMapping("view/updatestudent.do")
+	public void updatest(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		St yin = new St();
+		HttpSession session = request.getSession();
+		
+		
+		yin.setSt_id(request.getParameter("stid"));
+		yin.setSt_name(request.getParameter("stname"));
+		yin.setSt_sex(request.getParameter("stsex"));
+		yin.setSt_age(request.getParameter("stage"));
+		yin.setSt_tel(request.getParameter("sttel"));
+		yin.setSt_address(request.getParameter("staddress"));
+		yin.setSt_email(request.getParameter("stemail"));
+		
+		
+		St student = stMapper.updateSt(yin);
+
 		session.setAttribute("studentresult", student);
 	}
 }

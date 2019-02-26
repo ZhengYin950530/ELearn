@@ -28,5 +28,20 @@
 		(#{st_id},#{st_name},#{st_sex},#{st_age},#{st_tel},#{st_address},#{st_email})
 	</insert>
 	
+	<update id = "updateSt" parameterType="com.entity.St">
+		update y_student 
+		set student_name=#{st_name},student_age=#{st_age},student_tel=#{st_tel},student_address=#{st_address},student_email=#{st_email}
+		where
+		student_id=#{st_id}
+		
+	</update>
+	
+	<delete id="deleteSt" parameterType="com.entity.St">
+		delete * from
+		y_student
+		where
+		student_id=#{st_id}
+	</delete>
+	
 
 </mapper>
