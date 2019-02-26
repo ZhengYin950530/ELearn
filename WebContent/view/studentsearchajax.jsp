@@ -28,7 +28,7 @@
 
 	<script>
 		function studentSearch() {
-			var stname = $("#stname").val();
+			var stname = $("#stname").val();//#只能引入id，不能是name；
 			var stage = $("#stage").val();
 			var params = {
 				"stname" : stname,
@@ -67,7 +67,8 @@
 		<tr>
 			<td>学生ID</td>
 			<td><input type="text"
-				value="${sessionScope.studentresult.getSt_id()}" name="student_id"></td>
+				value="${sessionScope.studentresult.getSt_id()}" 
+				name="student_id"></td>
 		</tr>
 		<tr>
 			<td>学生姓名</td>
@@ -78,17 +79,20 @@
 		<tr>
 			<td>性别</td>
 			<td><input type="text"
-				value="${sessionScope.studentresult.getSt_sex()}" name="student_sex"></td>
+				value="${sessionScope.studentresult.getSt_sex()}" 
+				name="student_sex"></td>
 		</tr>
 		<tr>
 			<td>年龄</td>
 			<td><input type="text"
-				value="${sessionScope.studentresult.getSt_age()}" name="student_age"></td>
+				value="${sessionScope.studentresult.getSt_age()}" 
+				name="student_age"></td>
 		</tr>
 		<tr>
 			<td>电话</td>
 			<td><input type="text"
-				value="${sessionScope.studentresult.getSt_tel()}" name="student_tel"></td>
+				value="${sessionScope.studentresult.getSt_tel()}" 
+				name="student_tel"></td>
 		</tr>
 		<tr>
 			<td>地址</td>

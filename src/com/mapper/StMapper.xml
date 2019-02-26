@@ -19,8 +19,14 @@
      	where student_name = #{st_name} 
      	or
      	student_age = #{st_age}
-
 	</select>
+	
+	<insert id = "saveSt" parameterType="com.entity.St">
+		insert 
+		into y_student
+		values
+		(#{st_id},#{st_name},#{st_sex},#{st_age},#{st_tel},#{st_address},#{st_email})
+	</insert>
 	
 
 </mapper>

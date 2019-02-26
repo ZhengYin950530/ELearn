@@ -17,11 +17,27 @@
   <tr><td>电话</td><td><input type="text" value="${requestScope.student.getStudent_tel()}" name="student_tel"></td></tr>
   <tr><td>地址</td><td><input type="text" value="${requestScope.student.getStudent_address()}" name="student_address"></td></tr>
   <tr><td>电子邮箱</td><td><input type="text" value="${requestScope.student.getStudent_email()}" name="student_email"></td></tr>
+  
   <tr align="center">
   <td colspan="2">
 
   </td>
   </tr>
   </table>
+<!--  <tr><a href="javascript:void(0);" onclick="studentdelete()"></a></tr>
+  
+  
+   <script>
+  		function studentdelete(){
+  			alert("即将删除用户信息。");
+  			$.ajax({
+  				url: "deletestudent.do",
+  				type:"post",
+  				
+  			})
+  			
+  		}
+  	
+  </script> -->
 </body>
 </html>

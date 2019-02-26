@@ -3,9 +3,9 @@ package com.entity;
 public class St {
 	private String st_id;
 	private String st_name;
-	private int st_sex;
+	private String st_sex;
 	private String st_age;
-	private int st_tel;
+	private String st_tel;
 	private String st_address;
 	private String st_email;
 	
@@ -26,10 +26,10 @@ public class St {
 	}
 	
 	//sex;
-	public int getSt_sex() {
+	public String getSt_sex() {
 		return st_sex;
 	}
-	public void setSt_sex(int st_sex) {
+	public void setSt_sex(String st_sex) {
 		this.st_sex = st_sex;
 	}
 	
@@ -42,10 +42,10 @@ public class St {
 	}
 	
 	//telephone;
-	public int getSt_tel() {
+	public String getSt_tel() {
 		return st_tel;
 	}
-	public void setSt_tel(int st_tel) {
+	public void setSt_tel(String st_tel) {
 		this.st_tel = st_tel;
 	}
 	
