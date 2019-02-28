@@ -25,6 +25,10 @@
 		</tr>
 
 	</table>
+	<center><a href="deletestudent.do?student_id=${requestScope.u.getUser_id() }" onclick="studentDelete()">
+
+删除个人信息
+</a></center>
 
 	<script>
 		function studentSearch() {
@@ -59,6 +63,8 @@
 				}
 			}
 		}
+		
+		
 	</script>
 	
 	

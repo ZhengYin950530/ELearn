@@ -37,7 +37,7 @@
 	</update>
 	
 	<delete id="deleteSt" parameterType="com.entity.St">
-		delete * from
+		delete from
 		y_student
 		where
 		student_id=#{st_id}

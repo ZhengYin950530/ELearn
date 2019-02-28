@@ -75,4 +75,18 @@ public class StAjaxController {
 
 		session.setAttribute("studentresult", student);
 	}
+	
+	@RequestMapping("view/deletestudent.do")
+	public void deletest(HttpServletResponse response,HttpServletRequest request) {
+		St yin = new St();
+		HttpSession session = request.getSession();
+		
+		yin.setSt_id(request.getParameter("st_id"));
+		
+		St student = stMapper.deleteSt(yin);
+		
+		session.setAttribute("studentresult", student);
+		
+		
+	}
 }

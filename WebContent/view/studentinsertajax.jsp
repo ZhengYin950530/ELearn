@@ -76,7 +76,10 @@
 					if(stage == "" || stage == null) {
 						alert("请输入年龄。");
 					}else {
-					$.ajax({
+						if(stsex == "" || stsex == null) {
+							alert("请输入性别。");
+						}else{
+						$.ajax({
 						url : "insertstudent.do",
 						type : "post",
 						data : params,
@@ -91,6 +94,7 @@
 
 						}
 					})
+						}
 					}
 				}
 			}
